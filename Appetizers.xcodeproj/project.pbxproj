@@ -23,6 +23,7 @@
 		565D81EA280B48530093DCDC /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565D81E9280B48530093DCDC /* LoadingView.swift */; };
 		565D81EC280B49330093DCDC /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565D81EB280B49330093DCDC /* Color+Ext.swift */; };
 		5668F844280E69DD00DE8C06 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668F843280E69DD00DE8C06 /* RemoteImage.swift */; };
+		5668F852280E7B9F00DE8C06 /* AppetizerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668F851280E7B9F00DE8C06 /* AppetizerDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		565D81E9280B48530093DCDC /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		565D81EB280B49330093DCDC /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		5668F843280E69DD00DE8C06 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		5668F851280E7B9F00DE8C06 /* AppetizerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				564F606F280A7D41008A463B /* AppetizersApp.swift */,
 				564F6073280A7D43008A463B /* Assets.xcassets */,
 				564F6075280A7D43008A463B /* Preview Content */,
+				5668F851280E7B9F00DE8C06 /* AppetizerDetailView.swift */,
 			);
 			path = Appetizers;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				564F6088280A8D47008A463B /* NetworkManager.swift in Sources */,
 				564F6070280A7D41008A463B /* AppetizersApp.swift in Sources */,
 				5668F844280E69DD00DE8C06 /* RemoteImage.swift in Sources */,
+				5668F852280E7B9F00DE8C06 /* AppetizerDetailView.swift in Sources */,
 				564F608C280A972B008A463B /* AppetizerViewModel.swift in Sources */,
 				564F607E280A7D7E008A463B /* AppetizerListView.swift in Sources */,
 				564F608E280B09B8008A463B /* Alerts.swift in Sources */,
