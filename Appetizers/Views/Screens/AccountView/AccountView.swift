@@ -8,29 +8,27 @@
 import SwiftUI
 
 struct AccountView: View {
-    @State var extraNapkins: Bool = true
-    @State var frequentRefills: Bool = false
-    @State var firstName: String = ""
-    @State var lastName: String = ""
-    @State var email: String = ""
-    @State var birthday: Date = Date()
+    
+    @StateObject var viewModel: AccountViewModel = AccountViewModel()
+    
+
 
     var body: some View {
         NavigationView {
             Form {
                 Section(header: Text("PERSONAL INFO")) {
-                    TextField("First Name", text: $firstName)
-                    TextField("Last Name", text: $lastName)
-                    TextField("Email", text: $email)
+                    TextField("First Name", text: $viewModel.firstName)
+                    TextField("Last Name", text: $viewModel.lastName)
+                    TextField("Email", text: $viewModel.email)
                         .keyboardType(.emailAddress)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
                     
-                    DatePicker("Birthday", selection: $birthday,displayedComponents: .date)
+                    DatePicker("Birthday", selection: $viewModel.birthday,displayedComponents: .date)
                         .pickerStyle(.segmented)
                     
                     Button {
-                        print("Tapped")
+                       viewModel.saveChanges()
                     } label: {
                         Text("Save Changes")
                     }
@@ -38,10 +36,15 @@ struct AccountView: View {
                 }
                 
                 Section(header: Text("REQUESTS")) {
-                    APToggle(isOn: $extraNapkins, title: "Extra Napkins")
-                    APToggle(isOn: $frequentRefills, title: "Frequent Refills")
+                    APToggle(isOn: $viewModel.extraNapkins, title: "Extra Napkins")
+                    APToggle(isOn: $viewModel.frequentRefills, title: "Frequent Refills")
                 }
             }.navigationTitle("Account")
+        }
+        .alert(item: $viewModel.alertItem) { alertItem in
+            Alert(title: alertItem.title,
+                  message: alertItem.message,
+                  dismissButton: alertItem.dismissButton)
         }
     }
 }
