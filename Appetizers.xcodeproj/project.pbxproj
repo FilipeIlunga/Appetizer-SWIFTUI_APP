@@ -102,7 +102,6 @@
 		565D81E5280B47A80093DCDC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				564F6071280A7D41008A463B /* AppetizerTabView.swift */,
 				5668F849280E796600DE8C06 /* AppetizerView */,
 				5668F847280E794300DE8C06 /* AccountView */,
 				5668F845280E792800DE8C06 /* OrderView */,
@@ -153,6 +152,7 @@
 		5668F849280E796600DE8C06 /* AppetizerView */ = {
 			isa = PBXGroup;
 			children = (
+				564F6071280A7D41008A463B /* AppetizerTabView.swift */,
 				564F607D280A7D7E008A463B /* AppetizerListView.swift */,
 			);
 			path = AppetizerView;
