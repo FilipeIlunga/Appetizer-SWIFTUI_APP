@@ -11,20 +11,18 @@ struct AccountView: View {
     
     @StateObject var viewModel: AccountViewModel = AccountViewModel()
     
-
-
     var body: some View {
         NavigationView {
             Form {
                 Section(header: Text("PERSONAL INFO")) {
-                    TextField("First Name", text: $viewModel.firstName)
-                    TextField("Last Name", text: $viewModel.lastName)
-                    TextField("Email", text: $viewModel.email)
+                    TextField("First Name", text: $viewModel.user.firstName)
+                    TextField("Last Name", text: $viewModel.user.lastName)
+                    TextField("Email", text: $viewModel.user.email)
                         .keyboardType(.emailAddress)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
                     
-                    DatePicker("Birthday", selection: $viewModel.birthday,displayedComponents: .date)
+                    DatePicker("Birthday", selection: $viewModel.user.birthday,displayedComponents: .date)
                         .pickerStyle(.segmented)
                     
                     Button {
@@ -32,14 +30,15 @@ struct AccountView: View {
                     } label: {
                         Text("Save Changes")
                     }
-                        
                 }
-                
                 Section(header: Text("REQUESTS")) {
-                    APToggle(isOn: $viewModel.extraNapkins, title: "Extra Napkins")
-                    APToggle(isOn: $viewModel.frequentRefills, title: "Frequent Refills")
+                    APToggle(isOn: $viewModel.user.extraNapkins, title: "Extra Napkins")
+                    APToggle(isOn: $viewModel.user.frequentRefills, title: "Frequent Refills")
                 }
             }.navigationTitle("Account")
+        }
+        .onAppear{
+            viewModel.retriveUser()
         }
         .alert(item: $viewModel.alertItem) { alertItem in
             Alert(title: alertItem.title,

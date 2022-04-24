@@ -27,6 +27,7 @@
 		5668F855280E933000DE8C06 /* APButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668F854280E933000DE8C06 /* APButton.swift */; };
 		5699A5522814F32500FA62E2 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5699A5512814F32500FA62E2 /* AccountViewModel.swift */; };
 		5699A5542814F4B200FA62E2 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5699A5532814F4B200FA62E2 /* StringExtensions.swift */; };
+		5699A5562815033900FA62E2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5699A5552815033900FA62E2 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		5668F854280E933000DE8C06 /* APButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APButton.swift; sourceTree = "<group>"; };
 		5699A5512814F32500FA62E2 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		5699A5532814F4B200FA62E2 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		5699A5552815033900FA62E2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				564F6083280A8427008A463B /* Appetizer.swift */,
+				5699A5552815033900FA62E2 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				564F608E280B09B8008A463B /* Alerts.swift in Sources */,
 				5699A5522814F32500FA62E2 /* AccountViewModel.swift in Sources */,
 				564F6082280A7D95008A463B /* OrderView.swift in Sources */,
+				5699A5562815033900FA62E2 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
