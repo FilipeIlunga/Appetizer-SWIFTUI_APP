@@ -17,8 +17,7 @@ struct OrderView: View {
                         ForEach(order.items) { appetizer in
                             AppetizerListCell(appetizer: appetizer)
                         }
-                        .onDelete { indexSet in
-                            order.items.remove(atOffsets: indexSet)
+                        .onDelete(perform: order.deleteItem)
                         }
                     }
                     .listStyle(.insetGrouped)
@@ -27,7 +26,7 @@ struct OrderView: View {
                         print("Order placed")
 
                     } label: {
-                        APButton(title: "$\(order.totalPrice()) - Place Order")
+                        APButton(title: "$\(order.totalPrice) - Place Order")
                     }
                     .padding(.bottom, 25)
                 }
@@ -39,12 +38,6 @@ struct OrderView: View {
         }
     }
     
-    func deleteItem(at offsets: IndexSet) {
-        order.items.remove(atOffsets: offsets)
-    }
-    
-}
-
 struct OrderView_Previews: PreviewProvider {
     static var previews: some View {
         OrderView()
